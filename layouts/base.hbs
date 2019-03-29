@@ -1,16 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>
-    {{title}}
-  </title>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../dist/styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="https://static.giffgaff.com/fonts/1.0.0/giffgaff-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://static.giffgaff.com/fonts/1.0.0/giffgaff-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://static.giffgaff.com/fonts/1.0.0/giffgaff-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://static.giffgaff.com/fonts/1.0.0/font.css" rel="stylesheet">
 </head>
 <body>
-  {{> header}}
-  {{{body}}}
-  <div id="app"></div>
-  {{> footer}}
-  <script src="../scripts/index.js"></script>
+
+<header class="header">
+    <img src="../images/logo.svg" class="header__logo-image"/></div>
+    <h1 class="header__heading">{{{body}}}</h1>
+</header>
+
+<main class="main">
+
+    <section class="content">
+        <form class="order-form u-border">
+            <p class="order-form__content">Order your free giffgaff SIM before 5.00pm for next day delivery. It's just that simple.</p>
+            <label for="firstname" class="form__label">First Name</label>
+            <input type="text" name="firstname" maxlength="30" class="firstname-field form__input order-form__input"/>
+            <label for="lastname" class="form__label">Last Name</label>
+            <input type="text" name="lastname" maxlength="30" class="lastname-field form__input order-form__input"/>
+            <label for="email" class="form__label">Email</label>
+            <input type="text" name="email" maxlength="30" class="email-field form__input order-form__input"/>
+            <label for="Address" class="form__label">Address</label>
+            <input type="text" name="Address" maxlength="30" class="address-field form__input order-form__input"/>
+            <p class="order-form__content-small">You accept our <a class="link" href="/boiler-plate/terms" data-target="#modalTerms" data-toggle="modal">terms and conditions</a> and <a class="link" href="/boiler-plate/privacy" data-target="#modalPrivacy" data-toggle="modal">privacy policy</a> by clicking below.</p>
+            <button class="c-btn c-btn--primary c-btn--center">
+                <span class="c-btn__switch">Order your free SIM</span>
+            </button>
+        </form>
+
+        <ul class="usp-list">
+            <li class="usp-list__usp">
+                <div class="usp-list__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/no-contract.png">
+                </div>
+                <div class="usp-list__usp__content">
+                    <h4 class="usp-list__usp__heading">No contracts</h4>
+                    <p>Flexible goodybags packed with data, mins and text to last a month.</p>
+                </div>
+            </li>
+            <li class="usp-list__usp">
+                <div class="usp-list__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/roaming.png">
+                </div>
+                <div class="usp-list__usp__content">
+                    <h4 class="usp-list__usp__heading">Roam like at home in the EU</h4>
+                    <p>Do all the things you would at home with no extra cost.</p>
+                </div>
+            </li>
+            <li class="usp-list__usp">
+                <div class="usp-list__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/rewards.png">
+                </div>
+                <div class="usp-list__usp__content">
+                    <h4 class="usp-list__usp__heading">Earn £5</h4>
+                    <p>Bring your mates on board and get £5. Cha-ching.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="content content__extra">
+        <ul class="usp-list-vertical">
+            <li class="usp-list-vertical__usp">
+                <div class="usp-list-vertical__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/no-contract.png">
+                </div>
+                <div class="usp-list-vertical__usp__content">
+                    <h4 class="usp-list-vertical__usp__heading">No contracts</h4>
+                    <p>Flexible goodybags packed with data, mins and text to last a month.</p>
+                </div>
+            </li>
+            <li class="usp-list-vertical__usp">
+                <div class="usp-list-vertical__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/roaming.png">
+                </div>
+                <div class="usp-list-vertical__usp__content">
+                    <h4 class="usp-list-vertical__usp__heading">Roam like at home in the EU</h4>
+                    <p>Do all the things you would at home with no extra cost.</p>
+                </div>
+            </li>
+            <li class="usp-list-vertical__usp">
+                <div class="usp-list-vertical__usp__image">
+                    <img src="https://static.giffgaff.com/optimise-test-assets/USP-icons-png/rewards.png">
+                </div>
+                <div class="usp-list-vertical__usp__content">
+                    <h4 class="usp-list-vertical__usp__heading">Earn £5</h4>
+                    <p>Bring your mates on board and get £5. Cha-ching.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- commented out, will decide later if needed -->
+    <!-- <section class="content content__extra">
+      <ol class="c-list-ordered join-list">
+        <h2 class="join-list__item join-list__heading">It's easy to join. Just three easy steps:</h2>
+        <li class="c-list-ordered__item join-list__item join-list__step">Fill in the form before 5:00PM, Mon-Fri and receive your SIM the next day.</li>
+        <li class="c-list-ordered__item join-list__item join-list__step">Once your SIM arrives pop it into an unlocked phone.</li>
+        <li class="c-list-ordered__item join-list__item join-list__step">Head to giffgaff.com to activate your SIM.</li>
+      </ol>
+    </section> -->
+
+</main>
+<footer class="footer">
+    <h4 class="footer__heading">giffgaff runs on the O2 network</h4>
+    <p class="footer__content">Copyright &copy; 2019 giffgaff</p>
+</footer>
+
+<script src="../js/address-lookup.js"></script>
+<script src="../js/order-form.js"></script>
+
 </body>
 </html>

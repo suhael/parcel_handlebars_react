@@ -2,14 +2,16 @@
   "name": "simple-example",
   "version": "1.0.0-beta.1",
   "scripts": {
-    "build": "parcel build pages/index.hbs --no-cache --public-url ./",
+    "build:css": "ENVIRONMENT='production' node ./node_modules/.bin/fe-styleguide-build --theme giffgaff --import scss/index.scss --destination dist",
+    "build": "npm run build:css && parcel build pages/index.hbs --no-cache --public-url ./",
     "start": "parcel pages/index.hbs --no-cache",
     "serve": "serve -s dist"
   },
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.6.1",
+    "fe-styleguide": "^32.0.4"
   },
   "devDependencies": {
     "node-sass": "^4.7.2",
